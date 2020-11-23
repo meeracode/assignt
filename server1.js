@@ -41,7 +41,7 @@ app.get("/profile1", function (req, res) {
   const prof = require("./profile");
 
   pofs = new prof(id = 1,
-    profession = "asdkjhalskdjahl\n", name = "John doe",
+    profession = " Proejct cm \n", name = "John doe",
     numberOfyears = 29, website = "https://website.com");
 
   var str1 ={"profs":pofs.profession,
