@@ -1,6 +1,13 @@
 <head>
   <meta charset="utf-8">
+
   <title>Node API assignment</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
 
 </head>
 
@@ -14,19 +21,48 @@
       Class- node api - profile.js
       job.js - consume
     </p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+
   </div>
 
   <div class="">
     <div col="">
-      <div row="">
+      <div row="row-12">
         <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+          <div id="professions" class="card-body">
+
+
+            <!-- <p class="card-text">Some
+            </p> -->
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+          <div id="professions1" class="card-body">
+
+
+            <!-- <p class="card-text">Some
+                    </p> -->
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <div id="professions2" class="card-body">
+
+
+            <!-- <p class="card-text">Some
+                    </p> -->
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <!-- <img src="..." class="card-img-top" alt="..."> -->
+          <div id="professions3" class="card-body">
+
+
+            <!-- <p class="card-text">Some
+                    </p> -->
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
           </div>
         </div>
       </div>
@@ -34,46 +70,60 @@
   </div>
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
   <script type="text/javascript">
     // constructing a queryURL variable we will use instead of the literal string inside of the ajax method
     var title = "space+jam";
-    var queryURL = "https://www.omdbapi.com/?t=" + title + "&y=&plot=short&apikey=trilogy";
+    var queryURL = "https://localhost:3000/";
 
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    }).then(function (response) {
-      console.log(response);
-      console.log(response.Runtime);
-    });
-    // ---------------------------------------------------------
-
-    console.log("This console.log will probably happen first because of asynchronicity.");
-    var x = 2;
-    var y = 10;
-    var z = 13;
-    console.log("We can also assign some variables and do some arithmetic while we wait too: 2 + 10 + 13 = ", x + y + z);
-  </script>
-
-</body>
-
-</html>
+    var pf2 = [
+          "id: id",
+          "name: name",
+          "profession: profession",
+           "website: website"
+        ];
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript">
-    // constructing a queryURL variable we will use instead of the literal string inside of the ajax method
+      var ptag = $("<\p>", {
+            text: "pf2" +  "  name" + "profession: profession" + "website: website       ",
+            id: "id",
+            name: "name",
+            class:"card-text"
+
+      });
+
+      var htag = $("<\h5>",{
+            class: "card-title1",
+            text:  "Profile"
+      });
+
+    // $('#professions').append("<p>" + "text" + " </p>");
+    // for( p=0; p< 10; p++){
+    $('#professions').append(ptag);
+    $('#professions').append(htag);
+
     var title = "space+jam";
-    var queryURL = "https://www.omdbapi.com/?t=" + title + "&y=&plot=short&apikey=trilogy";
+      var queryURL = "http://localhost:3001/profile1";
 
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    }).then(function (response) {
-      console.log(response);
-      console.log(response.Runtime);
-    });
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      }).then(function (response) {
+
+
+        var htag = $("<\h5>", {
+          class: "card-title1",
+          text: response.name
+        });
+
+        // $('#professions').append("<p>" + "text" + " </p>");
+        // for( p=0; p< 10; p++){
+        // $('#professions').append(ptag);
+        $('#professions').append(htag);
+
+        console.log(response);
+        // console.log(response.Runtime);
+      });
     // ---------------------------------------------------------
 
     console.log("This console.log will probably happen first because of asynchronicity.");
