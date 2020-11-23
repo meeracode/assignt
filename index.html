@@ -19,24 +19,26 @@
     <hr class="my-4">
     <p>Multiple profile
       Class- node api - profile.js
-      job.js - consume
+      - consume
     </p>
 
   </div>
 
-  <div class="">
-    <div col="">
-      <div row="row-12">
-        <div class="card" style="width: 18rem;">
-          <div id="professions" class="card-body">
+  <div class="conatiner">
+      <div class="row">
+          <div class="col-sm-4">
+          <div class="card" style="width: 18rem;">
+            <div id="professions" class="card-body">
 
 
-            <!-- <p class="card-text">Some
-            </p> -->
-            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+              <!-- <p class="card-text">Some
+              </p> -->
+              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            </div>
           </div>
         </div>
 
+        <div class="col-sm-4">
         <div class="card" style="width: 18rem;">
           <div id="professions1" class="card-body">
 
@@ -45,7 +47,10 @@
                     </p> -->
             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
           </div>
+
         </div>
+        </div>
+        <div class="col-sm-4">
         <div class="card" style="width: 18rem;">
           <div id="professions2" class="card-body">
 
@@ -55,26 +60,27 @@
             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
           </div>
         </div>
+        </div>
+        <div class="col-sm-4"></div>
         <div class="card" style="width: 18rem;">
           <!-- <img src="..." class="card-img-top" alt="..."> -->
           <div id="professions3" class="card-body">
 
-
+          </div>
             <!-- <p class="card-text">Some
                     </p> -->
             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
           </div>
         </div>
       </div>
-    </div>
-  </div>
+
 
 
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
   <script type="text/javascript">
     // constructing a queryURL variable we will use instead of the literal string inside of the ajax method
     var title = "space+jam";
-    var queryURL = "https://localhost:3000/";
+    var queryURL = "http://localhost:3001/";
 
     var pf2 = [
           "id: id",
@@ -85,7 +91,7 @@
 
 
       var ptag = $("<\p>", {
-            text: "pf2" +  "  name" + "profession: profession" + "website: website       ",
+            text: "  name" + "profession: profession" + "website: website       ",
             id: "id",
             name: "name",
             class:"card-text"
@@ -100,15 +106,33 @@
     // $('#professions').append("<p>" + "text" + " </p>");
     // for( p=0; p< 10; p++){
     $('#professions').append(ptag);
+    $('#professions1').append(ptag);
+    $('#professions2').append(ptag);
+    $('#professions3').append(ptag);
+
     $('#professions').append(htag);
 
+
+    $('#professions1').append(htag);
+    $('#professions2').append(htag);
+    $('#professions3').append(htag);
+
+
     var title = "space+jam";
-      var queryURL = "http://localhost:3001/profile1";
+    var queryURL = "http://127.0.0.1:3001/";
 
       $.ajax({
         url: queryURL,
         method: "GET"
       }).then(function (response) {
+
+        var ptag = $("<\p>", {
+          text: "  name" + "profession: profession" + "website: website ",
+          id: "id",
+          name: "name",
+          class: "card-text"
+
+        });
 
 
         var htag = $("<\h5>", {
@@ -118,13 +142,26 @@
 
         // $('#professions').append("<p>" + "text" + " </p>");
         // for( p=0; p< 10; p++){
-        // $('#professions').append(ptag);
+        $('#professions').append(ptag);
+
         $('#professions').append(htag);
+
+        $('#professions1').append(htag);
+        $('#professions2').append(htag);
+        $('#professions3').append(htag);
+
+
 
         console.log(response);
         // console.log(response.Runtime);
       });
-   
+    // ---------------------------------------------------------
+
+    console.log("This console.log will probably happen first because of asynchronicity.");
+    var x = 2;
+    var y = 10;
+    var z = 13;
+    console.log("We can also assign some variables and do some arithmetic while we wait too: 2 + 10 + 13 = ", x + y + z);
   </script>
 
 </body>

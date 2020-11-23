@@ -1,5 +1,5 @@
 class profile {
-  constructor(id, profession = "death", name = "John doe", numberOfyears= 0, website = "https://website.com") {
+  constructor(id, profession = "death", name = "John doe", numberOfyears= 0, website = "https://death.com") {
     this.id = id;
     this.name = name;
     this.profession = profession;

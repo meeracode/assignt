@@ -23,6 +23,16 @@ var pf2 = {
 
 };
 
+const prof = require("./profile");
+
+pofs = new prof(id = 1,
+  profession = " Proejct cm \n", name = "John doe",
+  numberOfyears = 29, website = "https://uci.edu");
+
+pofs3 = new prof(id = 1,
+  profession = " Proejct cm \n", name = "John doe2",
+  numberOfyears = 29, website = "https://uci.edu");
+
 // Create one more data entry for the character Obi Wan Kenobi.
 // Enter any values you like for the parameters following the same format as the Yoda and Darth Maul character
 //
@@ -38,20 +48,24 @@ app.get("/", function (req, res) {
 });
 
 app.get("/profile1", function (req, res) {
-  const prof = require("./profile");
 
-  pofs = new prof(id = 1,
-    profession = " Proejct cm \n", name = "John doe",
-    numberOfyears = 29, website = "https://website.com");
 
   var str1 ={"profs":pofs.profession,
-            "name": pofs.name};
+            "name": pofs.name,
+            "website": pofs.website};
 
   res.json(str1);
 });
 
 app.get("/profile2", function (req, res) {
-    res.json(pf2);
+
+  var str1 = {
+    "profs": pofs3.profession,
+    "name": pofs3.name,
+    "website": pofs3.website
+  };
+  res.json(str1);
+
 });
 
 // Create a new Express route that leads users to the new Obi Wan Kenobi Data
