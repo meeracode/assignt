@@ -6,134 +6,184 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-
-
 </head>
 
 <body>
 
   <div class="jumbotron">
-    <h1 class="display-4">Node API assignment</h1>
+    <h1 class="display-6">Node API assignment</h1>
     <p class="lead">Homework - profile</p>
-    <hr class="my-4">
-    <p>Multiple profile
-      Class- node api - profile.js
-      - consume
-    </p>
+    <!-- <hr class="my-4"> -->
 
   </div>
 
-  <div class="conatiner">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Profile</a>
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home </a>
+        </li>
+            <li class="nav-item active">
+              <a id="editbtn" class="nav-link" href="./addprofiles.html">Add <span class="sr-only">(current)</span></a>
+              <!-- <a id="addbtn" class="nav-link" href="#">Add <span class="sr-only">(current)</span></a> -->
+
+            </li>
+            <li class="nav-item active">
+              <a id="editbtn" class="nav-link" href="./addprofiles.html">Edit <span class="sr-only">(current)</span></a>
+              <!-- <a id="editbtn" class="nav-link" href="#">Edit <span class="sr-only">(current)</span></a> -->
+            </li>
+            <li class="nav-item active">
+              <a id="deletebtn" class="nav-link" href="./addprofiles.html">Delete <span class="sr-only">(current)</span></a>
+            </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <div id="embedhtml">
+
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>
+          <div class="card" style="width: 18rem;">
+          <div id="professions" class="card-body">
+
+            <h6>Name : John doe</h6>
+            <h6 class="card-text"> numberOfyears = 29 </h6>
+             <!-- <p class="card-text"></p> -->
+            <button class="btn btn-primary" >website = "https://uci.edu"</button>
+
+          </div>
+          </div>
+        </td>
+
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+         <td>
+          <div class="card" style="width: 18rem;">
+            <div id="professions1" class="card-body">
+
+              <h6>Name : John doe</h6>
+              <h6 class="card-text"> numberOfyears = 29 </h6>
+              <!-- <p class="card-text"></p> -->
+              <button class="btn btn-primary">website = "https://uci.edu"</button>
+              <!-- <p class="card-text">Some</p> -->
+              <!-- <a href="#" class="btn btn-primary">Delete</a> -->
+            </div>
+          </div>
+         </td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>
+        <div class="card" style="width: 18rem;">
+          <div id="professions2" class="card-body">
+            <p class="card-text">Some </p>
+                <h6>Name : John doe</h6>
+                <h6 class="card-text"> numberOfyears = 29 </h6>
+                <!-- <p class="card-text"></p> -->
+                <button class="btn btn-primary">website = "https://uci.edu"</button>
+
+            <!-- <p class="card-text">Some
+                              </p> -->
+
+          </div>
+        </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- <div class="conatiner">
       <div class="row">
           <div class="col-sm-4">
           <div class="card" style="width: 18rem;">
             <div id="professions" class="card-body">
-
-
-              <!-- <p class="card-text">Some
+              <p class="card-text">Some </p>
+               <p class="card-text">Some
               </p> -->
               <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-            </div>
+            <!-- </div>
           </div>
         </div>
 
         <div class="col-sm-4">
         <div class="card" style="width: 18rem;">
           <div id="professions1" class="card-body">
+            <p class="card-text">Some </p>
 
-
-            <!-- <p class="card-text">Some
+             <p class="card-text">Some
                     </p> -->
             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-          </div>
-
+          <!-- </div>
         </div>
         </div>
         <div class="col-sm-4">
         <div class="card" style="width: 18rem;">
           <div id="professions2" class="card-body">
-
-
-            <!-- <p class="card-text">Some
-                    </p> -->
-            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-          </div>
+             <p class="card-text">Some </p>
+             <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          <!-- </div>
         </div>
         </div>
         <div class="col-sm-4"></div>
         <div class="card" style="width: 18rem;">
-          <!-- <img src="..." class="card-img-top" alt="..."> -->
-          <div id="professions3" class="card-body">
-
-          </div>
+          <img src="..." class="card-img-top" alt="..."> -->
+          <!-- <div id="professions3" class="card-body">
+            <p class="card-text">Some </p>
+          </div> -->
             <!-- <p class="card-text">Some
                     </p> -->
             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-          </div>
+          <!-- </div>
         </div>
-      </div>
+      </div> -->
 
-
-
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
-    // constructing a queryURL variable we will use instead of the literal string inside of the ajax method
-    var title = "space+jam";
-    var queryURL = "http://localhost:3001/";
 
-    var pf2 = [
-          "id: id",
-          "name: name",
-          "profession: profession",
-           "website: website"
-        ];
+    $('#addbtn').on( 'click',function() {
+
+      $('#embedhtml').append(addprofiles.html);
 
 
-      var ptag = $("<\p>", {
-            text: "  name" + "profession: profession" + "website: website       ",
-            id: "id",
-            name: "name",
-            class:"card-text"
-
-      });
-
-      var htag = $("<\h5>",{
-            class: "card-title1",
-            text:  "Profile"
-      });
-
-    // $('#professions').append("<p>" + "text" + " </p>");
-    // for( p=0; p< 10; p++){
-    $('#professions').append(ptag);
-    $('#professions1').append(ptag);
-    $('#professions2').append(ptag);
-    $('#professions3').append(ptag);
-
-    $('#professions').append(htag);
+    });
 
 
-    $('#professions1').append(htag);
-    $('#professions2').append(htag);
-    $('#professions3').append(htag);
+    // var title = "space+jam";
+    var queryURL = "http://127.0.0.1:3003/";
 
-
-    var title = "space+jam";
-    var queryURL = "http://127.0.0.1:3001/";
+    // var queryURL = "/profile1";
 
       $.ajax({
         url: queryURL,
         method: "GET"
       }).then(function (response) {
+        //  url: "/api/tables", method: "GET"
+        console.log( response);
 
         var ptag = $("<\p>", {
           text: "  name" + "profession: profession" + "website: website ",
           id: "id",
           name: "name",
           class: "card-text"
-
         });
-
 
         var htag = $("<\h5>", {
           class: "card-title1",
@@ -145,25 +195,14 @@
         $('#professions').append(ptag);
 
         $('#professions').append(htag);
-
         $('#professions1').append(htag);
         $('#professions2').append(htag);
         $('#professions3').append(htag);
 
-
-
         console.log(response);
-        // console.log(response.Runtime);
+        console.log(response.Runtime);
       });
     // ---------------------------------------------------------
-
-    console.log("This console.log will probably happen first because of asynchronicity.");
-    var x = 2;
-    var y = 10;
-    var z = 13;
-    console.log("We can also assign some variables and do some arithmetic while we wait too: 2 + 10 + 13 = ", x + y + z);
   </script>
-
 </body>
-
 </html>
